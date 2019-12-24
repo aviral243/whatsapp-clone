@@ -18,7 +18,10 @@ Angular.module(App, [
   'angular-meteor',
   'ionic'
 ]);
- 
+
+new Loader(App)
+  .load(RoutesConfig);
+
 // Startup
 if (Meteor.isCordova) {
   Angular.element(document).on('deviceready', onReady);
